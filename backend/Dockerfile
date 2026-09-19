@@ -1,11 +1,16 @@
-FROM eclipse-temurin:21-jdk
+# ---- Build stage: uses Maven image, so .mvn / mvnw are not needed ----
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn clean package -DskipTests
 
+# ---- Run stage ----
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # TiDB Cloud CA certificate
 COPY cert/ca.pem /tmp/ca.pem
-
-# Add TiDB CA certificate to Java truststore
 RUN keytool -importcert -noprompt \
     -trustcacerts \
     -alias tidb-ca \
@@ -13,11 +18,7 @@ RUN keytool -importcert -noprompt \
     -keystore $JAVA_HOME/lib/security/cacerts \
     -storepass changeit
 
-COPY . .
+COPY --from=build /app/target/*.jar app.jar
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
-
-EXPOSE 8080
-
-CMD ["sh", "-c", "java -jar target/*.jar"]
+EXPOSE 8082
+CMD ["java", "-jar", "app.jar"]
