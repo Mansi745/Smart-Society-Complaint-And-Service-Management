@@ -1,0 +1,227 @@
+/* ==========================
+   Manage Residents
+========================== */
+
+.resident-container{
+    padding:30px;
+    background:#F8FAFC;
+    min-height:100vh;
+}
+
+.resident-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.resident-header h1{
+    color:#0F172A;
+    font-size:34px;
+    font-weight:700;
+}
+
+/* ==========================
+   Add Button
+========================== */
+
+.add-btn{
+    background:linear-gradient(90deg,#06B6D4,#0891B2);
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(6,182,212,.35);
+}
+
+/* ==========================
+   Search Box
+========================== */
+
+.search-box{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:30px;
+
+    border:2px solid #E2E8F0;
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.search-box:focus{
+
+    outline:none;
+
+    border-color:#06B6D4;
+
+    box-shadow:0 0 10px rgba(6,182,212,.20);
+
+}
+
+/* ==========================
+   Table
+========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+}
+
+table th{
+
+    background:linear-gradient(90deg,#1E293B,#334155);
+
+    color:white;
+
+    padding:16px;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+table td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #E2E8F0;
+
+    color:#475569;
+
+}
+
+table tbody tr{
+
+    transition:.3s;
+
+}
+
+table tbody tr:hover{
+
+    background:#F1F5F9;
+
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+
+.view,
+.edit,
+.delete{
+
+    border:none;
+
+    padding:9px 16px;
+
+    border-radius:10px;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin:3px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.view{
+
+    background:#06B6D4;
+
+}
+
+.view:hover{
+
+    background:#0891B2;
+
+}
+
+.edit{
+
+    background:#F59E0B;
+
+}
+
+.edit:hover{
+
+    background:#D97706;
+
+}
+
+.delete{
+
+    background:#EF4444;
+
+}
+
+.delete:hover{
+
+    background:#DC2626;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.resident-container{
+    padding:20px;
+}
+
+.resident-header{
+    flex-direction:column;
+    gap:15px;
+    align-items:flex-start;
+}
+
+.resident-header h1{
+    font-size:28px;
+}
+
+.add-btn{
+    width:100%;
+}
+
+.search-box{
+    width:100%;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+}

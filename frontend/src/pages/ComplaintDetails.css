@@ -1,0 +1,76 @@
+/* ==========================
+   Details Page
+========================== */
+
+.details-container{
+    padding:30px;
+    background:#F8FAFC;
+    min-height:100vh;
+}
+
+.details-container h1{
+    color:#0F172A;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.details-card{
+    background:#FFFFFF;
+    padding:35px;
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+    border-top:6px solid #06B6D4;
+
+    transition:.3s;
+}
+
+.details-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(15,23,42,.15);
+}
+
+.details-card p{
+    font-size:18px;
+    color:#475569;
+    margin:18px 0;
+    line-height:1.8;
+}
+
+.details-card strong{
+    color:#06B6D4;
+    font-weight:600;
+}
+
+/* Optional Divider */
+
+.details-card p:not(:last-child){
+    padding-bottom:15px;
+    border-bottom:1px solid #E2E8F0;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.details-container{
+    padding:20px;
+}
+
+.details-container h1{
+    font-size:28px;
+}
+
+.details-card{
+    padding:25px;
+}
+
+.details-card p{
+    font-size:16px;
+}
+
+}

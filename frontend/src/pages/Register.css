@@ -1,0 +1,281 @@
+/* ===========================================
+   Global
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:#F8FAFC;
+}
+
+/* ===========================================
+   Main Container
+=========================================== */
+
+.register-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+}
+
+/* ===========================================
+   Left Panel
+=========================================== */
+
+.left-panel{
+    flex:1;
+    background:linear-gradient(135deg,#0F172A,#1E3A8A,#06B6D4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+}
+
+.left-panel::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-90px;
+    right:-90px;
+}
+
+.left-panel::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    bottom:-70px;
+    left:-70px;
+}
+
+.overlay{
+    position:relative;
+    z-index:2;
+    max-width:500px;
+}
+
+.overlay h1{
+    font-size:44px;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.overlay h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+    opacity:.95;
+}
+
+/* ===========================================
+   Features
+=========================================== */
+
+.features{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.feature{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    padding:16px 22px;
+    border-radius:14px;
+    font-size:17px;
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateX(8px);
+    background:rgba(255,255,255,.18);
+}
+
+/* ===========================================
+   Right Panel
+=========================================== */
+
+.right-panel{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+    background:#F8FAFC;
+}
+
+/* ===========================================
+   Register Card
+=========================================== */
+
+.register-card{
+    width:100%;
+    max-width:480px;
+    background:#fff;
+    padding:45px;
+    border-radius:24px;
+    box-shadow:0 20px 50px rgba(15,23,42,.12);
+}
+
+.register-card h2{
+    font-size:34px;
+    color:#0F172A;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:#64748B;
+    margin-bottom:30px;
+    font-size:15px;
+}
+
+/* ===========================================
+   Inputs
+=========================================== */
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#334155;
+}
+
+.input-group input,
+.input-group select{
+    width:100%;
+    padding:14px 16px;
+    border:2px solid #E2E8F0;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+    background:#fff;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+    border-color:#06B6D4;
+    box-shadow:0 0 12px rgba(6,182,212,.18);
+}
+
+/* ===========================================
+   Register Button
+=========================================== */
+
+.register-btn{
+    width:100%;
+    margin-top:10px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#06B6D4,#0891B2);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(6,182,212,.35);
+}
+
+/* ===========================================
+   Login Link
+=========================================== */
+
+.login-text{
+    margin-top:28px;
+    text-align:center;
+    color:#64748B;
+}
+
+.login-text a{
+    color:#06B6D4;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login-text a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:992px){
+
+.register-container{
+    flex-direction:column;
+}
+
+.left-panel{
+    min-height:320px;
+    text-align:center;
+}
+
+.overlay h1{
+    font-size:34px;
+}
+
+.overlay h2{
+    font-size:24px;
+}
+
+.right-panel{
+    padding:30px 20px;
+}
+
+.register-card{
+    max-width:500px;
+}
+
+}
+
+@media(max-width:600px){
+
+.register-card{
+    padding:30px 22px;
+}
+
+.overlay h1{
+    font-size:28px;
+}
+
+.overlay h2{
+    font-size:20px;
+}
+
+.overlay p{
+    font-size:15px;
+}
+
+.feature{
+    font-size:15px;
+}
+
+}

@@ -1,0 +1,120 @@
+.navbar {
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Menu Button */
+.menu-btn {
+    cursor: pointer;
+    font-size: 28px !important;
+    margin-right: 20px;
+    color: #374151;
+    transition: 0.2s;
+}
+
+.menu-btn:hover {
+    color: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Left Side */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* Right Side */
+.navbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Icons */
+.nav-icon {
+    font-size: 25px !important;
+    color: #4b5563;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-icon:hover {
+    color: #2563eb;
+    transform: scale(1.08);
+}
+
+/* User */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #374151;
+    padding-left: 8px;
+}
+
+/* Notification badge */
+.MuiBadge-badge {
+    font-size: 10px !important;
+    min-width: 17px !important;
+    height: 17px !important;
+    padding: 0 4px !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 64px;
+        padding: 0 15px;
+    }
+
+    .navbar-left h2 {
+        font-size: 17px;
+    }
+
+    .navbar-right {
+        gap: 14px;
+    }
+
+    .user-info {
+        font-size: 13px;
+    }
+
+    .menu-btn {
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar-left h2 {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 12px;
+    }
+
+    .user-info {
+        font-size: 12px;
+    }
+}

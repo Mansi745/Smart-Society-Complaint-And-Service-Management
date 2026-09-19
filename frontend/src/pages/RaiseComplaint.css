@@ -1,0 +1,171 @@
+/* ==========================
+   Raise Complaint
+========================== */
+
+.raise-container{
+
+    max-width:850px;
+
+    margin:30px auto;
+
+    background:#FFFFFF;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    border-top:6px solid #06B6D4;
+
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+}
+
+.raise-container h1{
+
+    margin-bottom:30px;
+
+    color:#0F172A;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* ==========================
+   Form
+========================== */
+
+.complaint-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    padding:14px 16px;
+
+    border:2px solid #E2E8F0;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    background:#FFFFFF;
+
+    transition:.3s;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:#06B6D4;
+
+    box-shadow:0 0 10px rgba(6,182,212,.20);
+
+}
+
+/* ==========================
+   Submit Button
+========================== */
+
+button{
+
+    margin-top:10px;
+
+    background:linear-gradient(90deg,#06B6D4,#0891B2);
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 22px rgba(6,182,212,.35);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.raise-container{
+
+    margin:20px;
+
+    padding:25px;
+
+}
+
+.raise-container h1{
+
+    font-size:28px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+}

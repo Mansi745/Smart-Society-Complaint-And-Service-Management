@@ -1,0 +1,540 @@
+/* ==========================
+   Admin Dashboard
+========================== */
+
+.admin-dashboard {
+    padding: 10px 30px 30px 30px;
+    background: #F8FAFC;
+    min-height: 100vh;
+}
+
+.admin-dashboard h1{
+    margin-bottom:30px;
+    color:#0F172A;
+    font-size:34px;
+    font-weight:700;
+       margin-top: 0;
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.admin-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.admin-card{
+    background:#ffffff;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+    transition:.3s;
+    border-top:6px solid transparent;
+}
+
+.admin-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(15,23,42,.15);
+}
+
+.admin-card h3{
+    color:#475569;
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.admin-card h2{
+    color:#06B6D4;
+    font-size:36px;
+}
+
+/* Colored Top Border */
+
+.total{
+    border-top:5px solid #06B6D4;
+}
+
+.pending{
+    border-top:5px solid #F59E0B;
+}
+
+.progress{
+    border-top:5px solid #3B82F6;
+}
+
+.resolved{
+    border-top:5px solid #10B981;
+}
+
+/* ==========================
+   Table
+========================== */
+
+.table-box{
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+}
+
+.table-box h2{
+    color:#0F172A;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:linear-gradient(90deg,#1E293B,#334155);
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #E2E8F0;
+    color:#475569;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#F1F5F9;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.assign-btn,
+.resolve-btn,
+.delete-btn{
+
+    border:none;
+    color:white;
+    padding:9px 14px;
+    margin:3px;
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.assign-btn{
+    background:#06B6D4;
+}
+
+.assign-btn:hover{
+    background:#0891B2;
+}
+
+.resolve-btn{
+    background:#10B981;
+}
+
+.resolve-btn:hover{
+    background:#059669;
+}
+
+.delete-btn{
+    background:#EF4444;
+}
+
+.delete-btn:hover{
+    background:#DC2626;
+}
+
+/* ==========================
+   Bottom Section
+========================== */
+
+.bottom-section{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+.activity-card,
+.quick-card{
+
+    background:#FFFFFF;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+}
+
+.activity-card h3,
+.quick-card h3{
+
+    color:#0F172A;
+
+    margin-bottom:20px;
+
+}
+
+.activity-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.activity-card li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid #E2E8F0;
+
+    color:#475569;
+
+}
+
+.quick-card{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.quick-card button{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(90deg,#06B6D4,#0891B2);
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quick-card button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(6,182,212,.35);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.admin-cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+.bottom-section{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.admin-dashboard{
+padding:20px;
+}
+
+.admin-cards{
+grid-template-columns:1fr;
+}
+
+.table-box{
+overflow-x:auto;
+}
+
+table{
+min-width:700px;
+}
+
+}
+/* ==========================
+   Admin Cards Top Colors
+========================== */
+
+.admin-card{
+    background:#ffffff;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+    transition:.3s;
+    border-top:6px solid transparent;
+}
+
+
+.admin-card:hover{
+    transform:translateY(-8px);
+}
+
+
+/* Total Residents */
+
+.admin-card.users{
+    border-top-color:#8B5CF6;
+}
+
+.admin-card.users h2{
+    color:#8B5CF6;
+}
+
+
+/* Total Complaints */
+
+.admin-card.complaints{
+    border-top-color:#06B6D4;
+}
+
+.admin-card.complaints h2{
+    color:#06B6D4;
+}
+
+
+/* Pending */
+
+.admin-card.pending{
+    border-top-color:#F59E0B;
+}
+
+.admin-card.pending h2{
+    color:#F59E0B;
+}
+
+
+/* Resolved */
+
+.admin-card.resolved{
+    border-top-color:#10B981;
+}
+
+.admin-card.resolved h2{
+    color:#10B981;
+}
+/* ==========================
+   FIX PENDING CARD
+========================== */
+
+.admin-card.pending {
+    background: #FFFFFF !important;
+    border-top: 6px solid #F59E0B !important;
+}
+
+.admin-card.pending h2 {
+    color: #F59E0B !important;
+}
+
+.admin-card.pending h3 {
+    color: #475569 !important;
+}
+/* ==========================
+   Admin Card Consistent Style
+========================== */
+
+.admin-card {
+    background: #ffffff !important;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    transition: 0.3s;
+    border-top: 6px solid transparent;
+}
+
+/* Card Heading - same for all cards */
+.admin-card h3 {
+    color: #475569 !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Card Number */
+.admin-card h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Total Residents */
+.admin-card.users {
+    border-top-color: #8B5CF6;
+}
+
+.admin-card.users h2 {
+    color: #8B5CF6 !important;
+}
+
+/* Total Complaints */
+.admin-card.complaints {
+    border-top-color: #06B6D4;
+}
+
+.admin-card.complaints h2 {
+    color: #06B6D4 !important;
+}
+
+/* Pending */
+.admin-card.pending {
+    background: #ffffff !important;
+    border-top-color: #F59E0B !important;
+}
+
+.admin-card.pending h3 {
+    color: #475569 !important;
+}
+
+.admin-card.pending h2 {
+    color: #F59E0B !important;
+}
+
+/* Resolved */
+.admin-card.resolved {
+    border-top-color: #10B981;
+}
+
+.admin-card.resolved h2 {
+    color: #10B981 !important;
+}
+/* ==========================
+   Recent Complaints
+========================== */
+
+.recent-complaints {
+    margin-top: 35px;
+}
+
+.recent-complaints h2 {
+    margin-top: 20;
+    margin-bottom: 25px;
+}
+/* =========================================
+   ADMIN DASHBOARD - FIX ALL CARDS
+========================================= */
+
+.admin-cards .admin-card {
+  background: #ffffff !important;
+  padding: 25px !important;
+  border-radius: 18px !important;
+  text-align: center !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08) !important;
+  transition: 0.3s !important;
+  box-sizing: border-box !important;
+}
+
+/* Hover */
+
+.admin-cards .admin-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.15) !important;
+}
+
+/* =========================================
+   ALL HEADINGS SAME
+========================================= */
+
+.admin-cards .admin-card h3 {
+  color: #475569 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin: 0 0 12px 0 !important;
+}
+
+/* =========================================
+   ALL NUMBERS SAME SIZE
+========================================= */
+
+.admin-cards .admin-card h2 {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+/* =========================================
+   TOTAL RESIDENTS
+========================================= */
+
+.admin-cards .admin-card.users {
+  background: #ffffff !important;
+  border-top: 6px solid #8B5CF6 !important;
+}
+
+.admin-cards .admin-card.users h2 {
+  color: #8B5CF6 !important;
+}
+
+/* =========================================
+   TOTAL COMPLAINTS
+========================================= */
+
+.admin-cards .admin-card.complaints {
+  background: #ffffff !important;
+  border-top: 6px solid #06B6D4 !important;
+}
+
+.admin-cards .admin-card.complaints h2 {
+  color: #06B6D4 !important;
+}
+
+/* =========================================
+   PENDING
+========================================= */
+
+.admin-cards .admin-card.pending {
+  background: #ffffff !important;
+  border-top: 6px solid #F59E0B !important;
+}
+
+.admin-cards .admin-card.pending h3 {
+  color: #475569 !important;
+}
+
+.admin-cards .admin-card.pending h2 {
+  color: #F59E0B !important;
+}
+
+/* =========================================
+   RESOLVED
+========================================= */
+
+.admin-cards .admin-card.resolved {
+  background: #ffffff !important;
+  border-top: 6px solid #10B981 !important;
+}
+
+.admin-cards .admin-card.resolved h2 {
+  color: #10B981 !important;
+}

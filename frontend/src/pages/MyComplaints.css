@@ -1,0 +1,252 @@
+/* ==========================
+   Manage Complaints
+========================== */
+
+.complaints-container{
+    background:#FFFFFF;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+}
+
+.complaints-container h1{
+    color:#0F172A;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+/* ==========================
+   Search Box
+========================== */
+
+.search-box{
+    width:320px;
+    padding:14px 16px;
+
+    border:2px solid #E2E8F0;
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.search-box:focus{
+
+    outline:none;
+
+    border-color:#06B6D4;
+
+    box-shadow:0 0 10px rgba(6,182,212,.20);
+
+}
+
+/* ==========================
+   Table
+========================== */
+
+table{
+
+    width:100%;
+
+    margin-top:25px;
+
+    border-collapse:collapse;
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+}
+
+th{
+
+    background:linear-gradient(90deg,#1E293B,#334155);
+
+    color:#FFFFFF;
+
+    padding:16px;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+td{
+
+    padding:16px;
+
+    text-align:center;
+
+    color:#475569;
+
+    border-bottom:1px solid #E2E8F0;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#F1F5F9;
+
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+
+.view,
+.edit,
+.delete{
+
+    border:none;
+
+    padding:9px 16px;
+
+    margin:3px;
+
+    border-radius:10px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.view{
+
+    background:#06B6D4;
+
+}
+
+.view:hover{
+
+    background:#0891B2;
+
+    transform:translateY(-2px);
+
+}
+
+.edit{
+
+    background:#F59E0B;
+
+}
+
+.edit:hover{
+
+    background:#D97706;
+
+    transform:translateY(-2px);
+
+}
+
+.delete{
+
+    background:#EF4444;
+
+}
+
+.delete:hover{
+
+    background:#DC2626;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   Status Badge
+========================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* Pending */
+
+.status.pending{
+
+    background:#FEF3C7;
+    color:#B45309;
+
+}
+
+/* In Progress */
+
+.status.in-progress{
+
+    background:#DBEAFE;
+    color:#1D4ED8;
+
+}
+
+/* Resolved */
+
+.status.resolved{
+
+    background:#DCFCE7;
+    color:#15803D;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.complaints-container{
+
+    padding:20px;
+
+}
+
+.complaints-container h1{
+
+    font-size:28px;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+}

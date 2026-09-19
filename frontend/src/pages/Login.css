@@ -1,0 +1,542 @@
+/* ==========================
+   LOGIN PAGE ONLY
+========================== */
+
+.login-container,
+.login-container * {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* ==========================
+   Main Container
+========================== */
+
+.login-container {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #F8FAFC;
+}
+
+
+/* ==========================
+   Left Panel
+========================== */
+
+.login-container .left-panel {
+    flex: 1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0F172A,
+            #1E3A8A,
+            #06B6D4
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Decorative Circle */
+
+.login-container .left-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+
+    top: -80px;
+    right: -80px;
+}
+
+
+/* Decorative Circle */
+
+.login-container .left-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.05);
+
+    bottom: -70px;
+    left: -70px;
+}
+
+
+/* ==========================
+   Overlay
+========================== */
+
+.login-container .overlay {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 500px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================
+   Left Heading
+========================== */
+
+.login-container .overlay h1 {
+    font-size: 42px;
+
+    margin: 0 0 10px 0;
+    padding: 0;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+.login-container .overlay h2 {
+    font-size: 28px;
+
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    font-weight: 600;
+
+    color: white;
+}
+
+
+.login-container .overlay p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    opacity: .95;
+
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    color: white;
+}
+
+
+/* ==========================
+   Features
+========================== */
+
+.login-container .features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.login-container .feature {
+    background: rgba(255,255,255,.12);
+
+    padding: 16px 20px;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+
+    font-size: 17px;
+
+    transition: .3s;
+
+    color: white;
+}
+
+
+.login-container .feature:hover {
+    transform: translateX(8px);
+
+    background: rgba(255,255,255,.18);
+}
+
+
+/* ==========================
+   Right Panel
+========================== */
+
+.login-container .right-panel {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #F8FAFC;
+
+    padding: 40px;
+}
+
+
+/* ==========================
+   Login Card
+========================== */
+
+.login-container .login-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    background: #FFFFFF;
+
+    padding: 45px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(15,23,42,.12);
+
+    margin: 0;
+}
+
+
+/* ==========================
+   Login Heading
+========================== */
+
+.login-container .login-card h2 {
+    font-size: 34px;
+
+    color: #0F172A;
+
+    margin: 0 0 8px 0;
+    padding: 0;
+
+    font-weight: 700;
+}
+
+
+.login-container .subtitle {
+    color: #64748B;
+
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    font-size: 15px;
+}
+
+
+/* ==========================
+   Inputs
+========================== */
+
+.login-container .input-group {
+    margin: 0 0 22px 0;
+    padding: 0;
+}
+
+
+.login-container .input-group label {
+    display: block;
+
+    margin: 0 0 8px 0;
+    padding: 0;
+
+    font-weight: 600;
+
+    color: #334155;
+
+    font-size: 14px;
+}
+
+
+.login-container .input-group input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #E2E8F0;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+    background: #FFFFFF;
+
+    color: #0F172A;
+
+    outline: none;
+}
+
+
+.login-container .input-group input:focus {
+    outline: none;
+
+    border-color: #06B6D4;
+
+    box-shadow:
+        0 0 12px rgba(6,182,212,.18);
+}
+
+
+/* ==========================
+   Login Options
+========================== */
+
+.login-container .login-options {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    margin: 0 0 25px 0;
+    padding: 0;
+
+    font-size: 14px;
+}
+
+
+.login-container .remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #475569;
+}
+
+
+.login-container .login-options a {
+    color: #06B6D4;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.login-container .login-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   Login Button
+========================== */
+
+.login-container .login-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #06B6D4,
+            #0891B2
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    margin: 0;
+}
+
+
+.login-container .login-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(6,182,212,.35);
+}
+
+
+/* ==========================
+   Register Link
+========================== */
+
+.login-container .register-link {
+    text-align: center;
+
+    margin: 30px 0 0 0;
+    padding: 0;
+
+    color: #64748B;
+
+    font-size: 14px;
+}
+
+
+.login-container .register-link a {
+    color: #06B6D4;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.login-container .register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   Responsive - Tablet
+========================== */
+
+@media (max-width: 992px) {
+
+    .login-container {
+        flex-direction: column;
+
+        min-height: 100vh;
+    }
+
+
+    .login-container .left-panel {
+        min-height: 320px;
+
+        text-align: center;
+
+        padding: 50px 30px;
+    }
+
+
+    .login-container .overlay {
+        max-width: 650px;
+    }
+
+
+    .login-container .overlay h1 {
+        font-size: 34px;
+    }
+
+
+    .login-container .overlay h2 {
+        font-size: 24px;
+    }
+
+
+    .login-container .right-panel {
+        padding: 30px 20px;
+    }
+
+
+    .login-container .login-card {
+        max-width: 500px;
+    }
+}
+
+
+/* ==========================
+   Responsive - Mobile
+========================== */
+
+@media (max-width: 600px) {
+
+    .login-container .left-panel {
+        min-height: auto;
+
+        padding: 40px 20px;
+    }
+
+
+    .login-container .overlay h1 {
+        font-size: 28px;
+    }
+
+
+    .login-container .overlay h2 {
+        font-size: 20px;
+    }
+
+
+    .login-container .overlay p {
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+
+    .login-container .features {
+        gap: 12px;
+    }
+
+
+    .login-container .feature {
+        font-size: 15px;
+
+        padding: 13px 15px;
+    }
+
+
+    .login-container .right-panel {
+        padding: 25px 15px;
+    }
+
+
+    .login-container .login-card {
+        padding: 30px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .login-container .login-card h2 {
+        font-size: 28px;
+    }
+
+
+    .login-container .subtitle {
+        margin-bottom: 28px;
+    }
+}
