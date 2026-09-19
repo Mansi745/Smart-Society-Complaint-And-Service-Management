@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.metadata/
+bin/
+.env
+.env.local
+.idea/
+.vscode/
